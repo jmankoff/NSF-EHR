@@ -1,0 +1,118 @@
+\documentclass[11pt,letterpaper]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}                                                      %%
+%%%%%%%%%% EXACT 1in MARGINS %%%%%%%                                   %%
+\setlength{\textwidth}{6.5in}     %%                                   %%
+\setlength{\oddsidemargin}{0in}   %% (It is recommended that you       %%
+\setlength{\evensidemargin}{0in}  %%  not change these parameters,     %%
+\setlength{\textheight}{8.5in}    %%  at the risk of having your       %%
+\setlength{\topmargin}{0in}       %%  proposal dismissed on the basis  %%
+\setlength{\headheight}{0in}      %%  of incorrect formatting!!!)      %%
+\setlength{\headsep}{0in}         %%                                   %%
+\setlength{\footskip}{.5in}       %%                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                                   %%
+\newcommand{\required}[1]{\section*{\hfil #1\hfil}}                    %%
+\renewcommand{\refname}{\hfil References Cited\hfil}                   %%
+%\bibliographystyle{plain}                                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[compact]{titlesec}
+    \titlespacing{\section}{0pt}{2ex}{1ex}
+    \titlespacing{\subsection}{0pt}{1ex}{0ex}
+    \titlespacing{\subsubsection}{0pt}{0.5ex}{0ex}
+    
+%Import the natbib package and sets a bibliography  and citation styles
+\usepackage{natbib}
+\bibliographystyle{abbrvnat}
+%\setcitestyle{authoryear,open={((},close={))}}
+
+\usepackage{booktabs} % For formal tables
+\usepackage[ruled]{algorithm2e} % For algorithms
+
+% User added packages
+
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{csquotes}
+\usepackage{wrapfig}
+\usepackage{multirow}
+\usepackage{todonotes}
+\usepackage{graphicx}
+\usepackage{subcaption} % for subfigures
+\usepackage[shortlabels]{enumitem}
+\setlist{noitemsep}
+\setlist[1]{labelindent=0} % < Usually a good idea
+\setlist[itemize]{leftmargin=0}
+\setlist[itemize]{label=\textbullet}
+%\setlist[itemize][label=\textbullet]
+%[label=\emph{\alph*})]
+\setlist[itemize]{labelindent=0}
+\setlist[itemize]{itemindent=0}
+\setlist[enumerate]{labelsep=*, leftmargin=1pc}
+\setlist[enumerate,1]{label = \arabic*.,
+ref = \arabic*}
+\setlist[enumerate,2]{label = \emph{\alph*}),
+ref = \theenumi.\emph{\alph*}}
+\setlist[enumerate,3]{label = \roman*),
+ref = \theenumii.\roman*}
+\setlist[description]{font=\sffamily\bfseries}
+
+\newcommand{\cmu}[1]{%{\bf XX if we include CMU data:} \textcolor{blue}{#1}
+}
+
+% User-Defined Commands
+\newcommand{\fig}[1]{Figure~\ref{#1}}
+\newcommand{\tbl}[1]{Table~\ref{#1}}
+\newcommand{\algo}[1]{Algorithm~\ref{#1}}
+\newcommand{\sect}[1]{Section~\ref{#1}}
+\newcommand{\etal}[0]{{\em et al.~}}
+\newcommand{\eg}[0]{{\em e.g.,~}}
+\newcommand{\ie}[0]{{\em i.e.,~}}
+\newcommand{\etc}[0]{{\em etc.~}}
+
+\newcommand\numparticipants[0]{209 }
+\newcommand\numdiscriminationevents[0]{454 }
+\newcommand\numdiscriminationeventsfinal[0]{448 }
+
+
+\newcommand\acomment[1]{\textcolor{orange}{\textit{Anind: #1}}}
+\newcommand\anind[1]{\textcolor{orange}{\textit{Anind: #1}}}
+\newcommand\jcomment[1]{\textcolor{red}{\textit{Jen: #1}}}
+\newcommand\jm[1]{\textcolor{red}{\textit{Jen: #1}}}
+\newcommand\jen[2]{\textcolor{blue}{#1}\textcolor{red}{\textit{Jen: #2}}}
+%\newcommand\jen[2]{\textcolor{blue}{#1}\textcolor{red}{\textit{Jen: #2}}}
+\newcommand\ycomment[1]{\textcolor{blue}{\textit{Yasaman: #1}}}
+\newcommand\yasaman[1]{\textcolor{blue}{\textit{Yasaman: #1}}}
+\newcommand\kcomment[1]{\textcolor{brown}{\textit{Kevin: #1}}}
+\newcommand\kevin[1]{\textcolor{brown}{\textit{Kevin: #1}}}
+\newcommand\pcomment[1]{\textcolor{green}{\textit{Paula: #1}}}
+\newcommand\paula[1]{\textcolor{green}{\textit{Paula: #1}}}
+
+% Document starts
+\begin{document}
+% Title portion
+\title{Addressing Sources of Stress for Women and Underrepresented Minorities in STEM Learning Environments }
+
+
+\setcounter{page}{1}
+%\include{NSFdata}
+
+\include{nsfsumm}
+ \setcounter{page}{1}
+
+\input{1-intro}
+\input{2-back}
+\input{3-data}
+\input{5-result}
+
+\input{4-analysis}
+%\input{6-discussion}
+\input{7-conclusion}
+
+\include{nsfrefs}
+ \setcounter{page}{1}
+
+\end{document}
