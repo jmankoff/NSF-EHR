@@ -33,15 +33,18 @@
 \usepackage[ruled]{algorithm2e} % For algorithms
 
 % User added packages
-
 \usepackage{caption}
 \usepackage{subcaption}
 \usepackage{csquotes}
 \usepackage{wrapfig}
 \usepackage{multirow}
+\usepackage{tcolorbox}
 \usepackage{todonotes}
 \usepackage{graphicx}
+\usepackage[table,xcdraw]{xcolor}
+%\documentclass[xcolor=table]{beamer}
 \usepackage{subcaption} % for subfigures
+\usepackage{colortbl}
 \usepackage[shortlabels]{enumitem}
 \setlist{noitemsep}
 \setlist[1]{labelindent=0} % < Usually a good idea
@@ -60,6 +63,11 @@ ref = \theenumi.\emph{\alph*}}
 ref = \theenumii.\roman*}
 \setlist[description]{font=\sffamily\bfseries}
 
+
+\newenvironment{WrapText}[1][r]
+  {\wrapfigure{#1}{0.5\textwidth}\tcolorbox}
+  {\endtcolorbox\endwrapfigure}
+  
 \newcommand{\cmu}[1]{%{\bf XX if we include CMU data:} \textcolor{blue}{#1}
 }
 
@@ -68,7 +76,7 @@ ref = \theenumii.\roman*}
 \newcommand{\tbl}[1]{Table~\ref{#1}}
 \newcommand{\algo}[1]{Algorithm~\ref{#1}}
 \newcommand{\sect}[1]{Section~\ref{#1}}
-\newcommand{\etal}[0]{{\em et al.~}}
+\newcommand{\etal}[0]{ et al.~}
 \newcommand{\eg}[0]{{\em e.g.,~}}
 \newcommand{\ie}[0]{{\em i.e.,~}}
 \newcommand{\etc}[0]{{\em etc.~}}
@@ -80,9 +88,9 @@ ref = \theenumii.\roman*}
 
 \newcommand\acomment[1]{\textcolor{orange}{\textit{Anind: #1}}}
 \newcommand\anind[1]{\textcolor{orange}{\textit{Anind: #1}}}
-\newcommand\jcomment[1]{\textcolor{red}{\textit{Jen: #1}}}
-\newcommand\jm[1]{\textcolor{red}{\textit{Jen: #1}}}
-\newcommand\jen[2]{\textcolor{blue}{#1}\textcolor{red}{\textit{Jen: #2}}}
+\newcommand\jen[1]{\textcolor{red}{\textit{Jen: #1}}}
+\newcommand\jm[2]{\textcolor{blue}{#1}\textcolor{red}{\textit{Jen: #2}}}
+%\newcommand\jen[2]{\textcolor{blue}{#1}\textcolor{red}{\textit{Jen: #2}}}
 %\newcommand\jen[2]{\textcolor{blue}{#1}\textcolor{red}{\textit{Jen: #2}}}
 \newcommand\ycomment[1]{\textcolor{blue}{\textit{Yasaman: #1}}}
 \newcommand\yasaman[1]{\textcolor{blue}{\textit{Yasaman: #1}}}
@@ -108,9 +116,11 @@ ref = \theenumii.\roman*}
 \input{3-data}
 \input{5-result}
 
-\input{4-analysis}
+%\input{4-analysis}
 %\input{6-discussion}
 \input{7-conclusion}
+
+\input{budget-justification}
 
 \include{nsfrefs}
  \setcounter{page}{1}
