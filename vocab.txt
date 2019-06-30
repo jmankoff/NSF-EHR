@@ -1,0 +1,3 @@
+Keep: adversity exposure
+Keep: negative events
+Drop: Challenges
